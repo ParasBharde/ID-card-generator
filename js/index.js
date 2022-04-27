@@ -19,10 +19,19 @@ function generateIdCard(event)
     const targetLocation = document.getElementById("generated-location")
     targetLocation.innerHTML = location;
 
-    const generatedIDCardContainer = document.getElementById("generated-id-card");
+     const generatedIDCardContainer = document.getElementById("generated-id-card");
     generatedIDCardContainer.style.display = "block";
 
-}    
+}  
+// Get Uploaded Photo //
+
+function preview_image(event)
+ {
+   console.log("event", event)
+   var student = document.getElementById('output_image');
+  student.src = URL.createObjectURL(event.target.files[0]);
+}
+
 
 
 
